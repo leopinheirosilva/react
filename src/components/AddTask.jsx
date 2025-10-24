@@ -1,5 +1,5 @@
 import { useState } from "react"; //Hook useState para gerenciar estado
-import Input from "./input"; //Componente Input personalizado
+import Input from "./Input"; //Componente Input personalizado
 
 function AddTask({ addTask }) {
   // Componente AddTask, onde as tarefas são adicionadas, recebendo a função addTask via props
