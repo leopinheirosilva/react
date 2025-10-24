@@ -1,5 +1,5 @@
 import Button from "./Button"; //Importa o componente Button
-import { ChevronRightIcon, Trash2 } from "lucide-react"; //Ícones do Lucide
+import { ChevronRightIcon, Trash2, CheckIcon } from "lucide-react"; //Ícones do Lucide
 import { useNavigate } from "react-router-dom"; //Hook para navegação entre páginas
 
 function Tasks(props) {
@@ -21,12 +21,12 @@ function Tasks(props) {
           <button //botao para marcar a tarefa como concluída
             onClick={() => props.onTaskClick(task.id)} //Chama a função onTaskClick do componente pai (App), passando o id da tarefa clicada
             className={
-              `bg-slate-400 w-full text-white p-2 rounded-md text-left ${
+              `bg-slate-400 w-full flex items-center gap-2 text-white p-2 rounded-md text-left ${
                 task.completed ? "line-through" : ""
               }` /*Se a tarefa estiver concluída, aplica a classe line-through, usando um operador ternário */
             }
           >
-            {task.completed ? "✅ " : ""}
+            {task.completed && <CheckIcon />} {/*Ícone de check se a tarefa estiver concluída */}
             {task.title} {/*exibe o título da tarefa */}
           </button>
           <Button // componente Button para ver os detalhes da tarefa
