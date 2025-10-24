@@ -26,6 +26,7 @@ function Tasks(props) {
               }` /*Se a tarefa estiver concluída, aplica a classe line-through, usando um operador ternário */
             }
           >
+            {task.completed ? "✅ " : ""}
             {task.title} {/*exibe o título da tarefa */}
           </button>
           <Button // componente Button para ver os detalhes da tarefa
