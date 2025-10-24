@@ -1,5 +1,5 @@
 # react
-projeto react de lista de tarefas com validação
+Projeto React de lista de tarefas com validação
 
 Clique <a href="https://react-nu-brown.vercel.app/">aqui</a> para acessar o site!
 
