@@ -13,7 +13,7 @@ function App() {
       //Função assíncrona para buscar tarefas de uma API externa
         //CHAMAR API
         const response = await fetch(
-          "https://jsonplaceholder.typicode.com/todos?_limit=10",
+          "https://jsonplaceholder.typicode.com/todos?_limit=5",
           //Exemplo de API pública que retorna uma lista de tarefas (todos) com limite de 10 tarefas
           {
             method: "GET", //Método HTTP GET para buscar dados
