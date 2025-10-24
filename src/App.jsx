@@ -8,6 +8,10 @@ function App() {
     JSON.parse(localStorage.getItem("tasks")) || []
     /*Estado para armazenar a lista de tarefas, inicializado com os dados do localStorage ou um array vazio*/
   );
+  useEffect(() => { //Salva a lista de tarefas no localStorage sempre que o estado de tasks for atualizado
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    //Converte o array de tarefas em uma string JSON e salva no localStorage
+  }, [tasks]);
   useEffect(() => { //Carrega tarefas de uma API externa quando o componente for montado
     async function fetchTasks() {
       //Função assíncrona para buscar tarefas de uma API externa
@@ -26,10 +30,6 @@ function App() {
       }
       fetchTasks(); //Chama a função para buscar as tarefas
     }, []);
-  useEffect(() => { //Salva a lista de tarefas no localStorage sempre que o estado de tasks for atualizado
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    //Converte o array de tarefas em uma string JSON e salva no localStorage
-  }, [tasks]);
   function onTaskClick(taskId) { //Função para marcar a tarefa como concluída
     const newTasks = tasks.map((task) => {
       //Percorre a lista de tarefas
