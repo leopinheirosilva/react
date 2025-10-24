@@ -1,8 +1,8 @@
-# React + Vite
+# react
+projeto react de lista de tarefas com validação
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Clique <a href="https://react-nu-brown.vercel.app/">aqui</a> para acessar o site!
 
-Currently, two official plugins are available:
+Ou leia o QR code abaixo:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="frame.png" alt="Site react projeto lista de tarefas">
